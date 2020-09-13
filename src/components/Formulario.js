@@ -2,24 +2,26 @@ import React, { useState } from 'react'
 import Error from './Error'
 
 
-const Formulario = () => {
+const Formulario = ({ setBusqueda }) => {
 
     const [ termino, setTermino ] = useState('')
     const [ error, setError ] = useState(false)
 
-    const buscar = (evt) => {
+    const search = (evt) => {
         evt.preventDefault()
 
         if(termino.trim() === ''){
             setError(true)
             return
         }
+        setError(false)
+        setBusqueda(termino)
 
     }
 
     return (
         <>
-          <form onSubmit={ buscar }>
+          <form onSubmit={ search }>
             <div className="row">
               <div className="form-group col-md-8">
                   <input 
@@ -34,7 +36,8 @@ const Formulario = () => {
                   type="submit" 
                   className="btn btn-lg btn-danger btn-block"
                   placeholder="Buscar"
-                  />
+                  value="Buscar"
+                  />                  
               </div>
             </div>
             { error ? <Error mensaje="Agrega un termino de busqueda" /> : null }
