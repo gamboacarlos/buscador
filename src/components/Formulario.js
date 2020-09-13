@@ -34,7 +34,7 @@ const Formulario = ({ setBusqueda }) => {
               <div className="form-group col-md-4">
                   <input 
                   type="submit" 
-                  className="btn btn-lg btn-danger btn-block"
+                  className="btn btn-lg btn-warning btn-block"
                   placeholder="Buscar"
                   value="Buscar"
                   />                  

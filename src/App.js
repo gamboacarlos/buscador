@@ -79,6 +79,9 @@ function App() {
           >Siguiente &raquo;</button>)
         }
       </div>
+      <div className="row"> 
+        <p><br/><br/></p>
+      </div>
     </div>
   );
 }

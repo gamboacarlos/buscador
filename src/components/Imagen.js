@@ -17,7 +17,7 @@ const Imagen = ({ imagen }) => {
                     href={largeImageURL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-danger btn-block"
+                    className="btn btn-warning btn-block"
                     >Ver Imagen</a>
                 </div>
             </div>
